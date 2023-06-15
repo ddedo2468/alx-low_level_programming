@@ -2,7 +2,7 @@
 
 /**
  * main - entery point to a program that printing a line using printf
- * return 0 - (Success)
+ * return: 0 (Success)
  */
 
 int main(void)
