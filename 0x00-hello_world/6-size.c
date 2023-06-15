@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - entry point to the program 
- * Return: 0 (Success)
+ * main - a program to practice sizeof function
+ * Return: 0 (success)
  */
 
 int main(void)
