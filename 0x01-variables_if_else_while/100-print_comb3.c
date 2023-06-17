@@ -16,15 +16,18 @@ int main()
 	if (first_digit != second_digit && first_digit < second_digit) {
 		putchar('0' + first_digit);
 		putchar('0' + second_digit);
+
+		if (i < 89){
 		putchar(',');
 		putchar(' ');
 		}
+	}
 
 	i++;
     }
 
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
 
