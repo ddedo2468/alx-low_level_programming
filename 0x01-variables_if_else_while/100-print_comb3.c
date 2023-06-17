@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
- * main - entry to the main program
- * Description: program that prints all possible different combinations of two digits.
+/**
+ * main - entry point to the program
+ * Description: printing numbers and compare
  * Return: 0 (Success)
  */
 int main(void)
