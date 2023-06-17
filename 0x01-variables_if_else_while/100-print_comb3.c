@@ -2,33 +2,33 @@
 #include <stdlib.h>
 /*
  * main - entry to the main program
- * Description: a program that printing numbers.
+ * Description: program that prints all possible different combinations of two digits.
  * Return: 0 (Success)
  */
 int main(void)
 {
-        int i = 0;
+	int i = 0;
 
-        while (i < 100)
-        {
-                int first_digit = i / 10;
-                int second_digit = i % 10;
+	while (i < 100)
+	{
+		int first_digit = i / 10;
+		int second_digit = i % 10;
 
-                if (first_digit != second_digit && first_digit < second_digit)
-                {
-                        putchar('0' + first_digit);
-                        putchar('0' + second_digit);
+		if (first_digit != second_digit && first_digit < second_digit)
+		{
+			putchar('0' + first_digit);
+			putchar('0' + second_digit);
 
-                        if (i < 89)
-                        {
-                        putchar(',');
-                        putchar(' ');
-                        }
-                }
-                i++;
-        }
+			if (i < 89)
+			{
+			putchar(',');
+			putchar(' ');
+			}
+		}
+		i++;
+	}
 
-        putchar('\n');
+	putchar('\n');
 
-        return (0);
+	return (0);
 }
