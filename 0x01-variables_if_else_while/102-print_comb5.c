@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - main block
+ * description: Write a program that prints all possible 
+ * combinations of two two-digit numbers.
+ * Return: 0 (Success)
+ */
+
+int main(void)
+{
+
+	int p, q;
+
+	for (p=0; p<= 98; p++)
+	{
+		for(q=p+1; q <= 99; q++)
+		{
+			putchar((p / 10)+ '0');
+			putchar((p % 10)+ '0');
+			putchar(' ');
+			putchar((q / 10)+ '0');
+			putchar((q % 10)+ '0');
+				if (p == 99 && q == 99)
+				continue;
+				putchar(',');
+				putchar(' ');
+		}
+
+	}
+	putchar('\n');
+	return 0;
+}
