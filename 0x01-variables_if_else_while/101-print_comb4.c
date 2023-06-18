@@ -4,7 +4,8 @@
  * main - entry function to the program
  * return: 0 (Success)
  */
-int main() {
+int main(void)
+{
 	int i = 0;
 
 	while (i < 1000)
@@ -19,7 +20,8 @@ int main() {
 		putchar('0' + second_digit);
 		putchar('0' + third_digit);
 
-			if (i < 789){
+			if (i < 789)
+			{
 			putchar(',');
 			putchar(' ');
 			}
