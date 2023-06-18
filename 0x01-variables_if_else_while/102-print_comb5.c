@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - main block
- * description: Write a program that prints all possible 
- * combinations of two two-digit numbers.
- * Return: 0 (Success)
- */
-
+ *main - main block
+ *description: Write a program that prints all possible
+ *combinations of two two-digit numbers.
+ *Return: 0 (Success)
+*/
 int main(void)
 {
 
@@ -14,7 +13,7 @@ int main(void)
 
 	for (p = 0; p <= 98; p++)
 	{
-		for(q = p + 1; q <= 99; q++)
+		for (q = p + 1; q <= 99; q++)
 		{
 			putchar((p / 10) + '0');
 			putchar((p % 10) + '0');
