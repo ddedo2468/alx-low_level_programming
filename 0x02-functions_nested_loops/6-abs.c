@@ -1,6 +1,7 @@
 #include "main.h"
-/*
+/**
  * _abs - computes absolute value of a number
+ * Description: gets a number and return its abs value
  * @n: the number wich will be checked
  * Return: abs value
  */
