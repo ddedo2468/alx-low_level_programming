@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /*
  * main - entry point to the program
  * Description: a program that prints _putchar 
@@ -6,15 +6,16 @@
  */
 int main(void)
 {
-	char alx[] = {'_','p','u','t','c','h','a','r'};
 
-	for (int i = 0; i < sizeof(alx); i++)
-	{
-		printf("%c", alx[i]);
-
-	}
-
-	printf("\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
