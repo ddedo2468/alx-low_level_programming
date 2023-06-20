@@ -3,7 +3,7 @@
  * tines_table - prints the time table to 9
  * Description: printing all times table from 0 to 9
  */
-void times_tables(void)
+void times_table(void)
 {
 	int k, l, m;
 
