@@ -15,7 +15,7 @@ void times_tables(void)
 
 			if (l == 0)
 			{
-				_putchar('0);
+				_putchar('0');
 			}
 			else
 			{
@@ -26,7 +26,7 @@ void times_tables(void)
 			if (m < 10)
 			{
 				_putchar(' ');
-				_putchar(m + '0;);
+				_putchar(m + '0');
 			}
 			else
 			{
