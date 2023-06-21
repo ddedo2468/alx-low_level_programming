@@ -20,13 +20,11 @@ void print_times_table(int n)
 				printf("%d", k);
 				else
 				{
-					printf(",   ");
-
+					printf(", ");
 					if (k < 10)
-					printf("  %d", k);
+					printf("  ");
 					else if (k < 100)
-					printf(" %d", k);
-					else
+					printf(" ");
 					printf("%d", k);
 				}
 			}
@@ -34,4 +32,3 @@ void print_times_table(int n)
 		}
 	}
 }
-
