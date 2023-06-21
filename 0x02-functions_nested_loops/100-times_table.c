@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_times_table - prints any time table.
- * Description: prints the n time table start from 0.
+ * Description: prints the n time table starting from 0.
  * @n: number of times table
  */
 void print_times_table(int n)
@@ -16,35 +17,21 @@ void print_times_table(int n)
 			{
 				k = j * i;
 				if (j == 0)
+				printf("%d", k);
+				else
 				{
-					_putchar(k + '0');
-				}
-				else if (k < 10 && j != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(k + '0');
-				}
-				else if (k >= 10 && k < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((k / 10) + '0');
-					_putchar((k % 10) + '0');
-				}
-				else if (k >= 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar((k / 100) + '0');
-					_putchar(((k / 10) % 10) + '0');
-					_putchar((k % 10) + '0');
+					printf(",   ");
+
+					if (k < 10)
+					printf("  %d", k);
+					else if (k < 100)
+					printf(" %d", k);
+					else
+					printf("%d", k);
 				}
 			}
-			_putchar('\n');
+		printf("\n");
 		}
 	}
 }
+
