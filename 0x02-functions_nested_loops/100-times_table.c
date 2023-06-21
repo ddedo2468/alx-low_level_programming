@@ -3,7 +3,7 @@
  * prints_times_table - prints any time table.
  * @n: number of times table
  */
-void prints_times_table(int n)
+void print_times_table(int n)
 {
 	int i, j, k;
 
