@@ -8,8 +8,9 @@
 int sum_of_multiples()
 {
 	int total = 0;
+	int num;
 
-	for (int num = 1; num < 1024; num++)
+	for (num = 1; num < 1024; num++)
 	{
 		if (num % 3 == 0 || num % 5 == 0)
 		{
