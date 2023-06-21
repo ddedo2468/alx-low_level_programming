@@ -1,21 +1,28 @@
 #include <stdio.h>
-/*
- * sum_of_multiples - computes and prints 
- * the sum of all the multiples 
- * of 3 or 5 below 1024
- * Return: the total of sum
+/**
+ * main - computes and prints the sum of all multipels 3 or 5
+ * Return: 0 (Success)
  */
-int sum_of_multiples()
+int main(void)
 {
-	int total = 0;
-	int num;
+	unsigned long int s3, s5, s;
+	int i;
 
-	for (num = 1; num < 1024; num++)
+	s3 = 0;
+	s5 = 0;
+	s = 0;
+
+	for (i = 0; i < 1024; ++i)
 	{
-		if (num % 3 == 0 || num % 5 == 0)
+		if ((i % 3) == 0)
 		{
-			total += num;
+			s3 = s3 + i;
+		} else if ((i % 5) == 0)
+		{
+			s5 = s5 + i;
 		}
 	}
-	return total;
+	s = s3 + s5;
+	printf("%lu\n", s);
+	return (0);
 }
