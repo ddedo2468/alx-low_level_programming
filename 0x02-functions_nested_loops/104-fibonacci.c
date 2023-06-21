@@ -1,42 +1,35 @@
 #include <stdio.h>
-
-/**
- * print_fib - computes and prints the Fibonacci sequence up to n terms
- * @n: the number of terms to print
- * Return: 0 (Success)
- */
+#define LARGEST 10000000000
 int main(void)
 {
-	unsigned long int count, current, next, current_high, current_low, next_high, next_low;
+	unsigned long int previous_1 = 0, previous_2 = 1, current_1 = 0, current_2 = 2;
+	unsigned long int carry_1, carry_2, carry_3;
+	int count;
 
-	current = 1;
-	next = 2;
+	printf("%lu, %lu, ", previous_2, current_2);
 
-	printf("%lu", current);
-
-	for (count = 1; count < 91; count++)
+	for (count = 2; count < 98; count++)
 	{
-		printf(", %lu", next);
-		next = next + current;
-		current = next - current;
-	}
+		if (current_1 + current_2 > LARGEST || previous_2 > 0 || previous_1 > 0)
+		{
+			carry_1 = (current_1 + current_2) / LARGEST;
+			carry_2 = (current_1 + current_2) % LARGEST;
+			carry_3 = previous_1 + previous_2 + carry_1;
+			previous_1 = previous_2, previous_2 = carry_3;
+			current_1 = current_2, current_2 = carry_2;
+			printf("%lu%010lu", previous_2, current_2);
+		}
+		else
+		{
+			carry_2 = previous_1 + previous_2;
+			previous_1 = previous_2, previous_2 = carry_2;
+			printf("%lu", previous_2);
+		}
 
-	current_high = current / 1000000000;
-	current_low = current % 1000000000;
-	next_high = next / 1000000000;
-	next_low = next % 1000000000;
-
-	for (count = 92; count < 99; ++count)
-	{
-		printf(", %lu", next_high + (next_low / 1000000000));
-		printf("%09lu", next_low % 1000000000);
-		current_high = current_high + next_high;
-		next_high = current_high - next_high;
-		next_low = next_low + current_low;
-		current_low = next_low - current_low;
+		if (count != 97)
+			printf(", ");
 	}
 
 	printf("\n");
-
-	return 0;
+	return (0);
 }
