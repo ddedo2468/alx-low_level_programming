@@ -11,7 +11,8 @@ int main(void)
 
 	while (m < 4000000)
 	{
-		if (m % 2 == 0) m += m;
+		if (m % 2 == 0)
+		i += m;
 
 		n = m;
 		m += l;
