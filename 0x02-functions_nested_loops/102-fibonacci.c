@@ -5,9 +5,9 @@
  * Return: 0 (Success)
  */
 int main(void)
-{       
-        int i = 2;
-        long int  l = 1, m = 2, n;
+{
+	int i = 2;
+	long int l = 1, m = 2, n;
 
 	printf("%lu, ", l);
 
@@ -19,9 +19,9 @@ int main(void)
 		}
 		else
 		{
-			printf("%lu, ",m);
+			printf("%lu, ", m);
 		}
-		
+
 	n = m;
 	m += l;
 	l = n;
