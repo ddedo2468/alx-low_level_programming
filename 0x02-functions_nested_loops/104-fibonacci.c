@@ -5,27 +5,38 @@
  * @n: the number of terms to print
  * Return: 0 (Success)
  */
-void print_fib(int n)
+int main(void)
 {
-	unsigned long int first = 1, second = 2, fibonacci;
-	int i;
+	unsigned long int count, current, next, current_high, current_low, next_high, next_low;
 
-	printf("%lu, %lu", first, second);
+	current = 1;
+	next = 2;
 
-	for (i = 0; i < n - 2; ++i)
+	printf("%lu", current);
+
+	for (count = 1; count < 91; count++)
 	{
-		fibonacci = first + second;
-		printf(", %lu", fibonacci);
-		first = second;
-		second = fibonacci;
+		printf(", %lu", next);
+		next = next + current;
+		current = next - current;
+	}
+
+	current_high = current / 1000000000;
+	current_low = current % 1000000000;
+	next_high = next / 1000000000;
+	next_low = next % 1000000000;
+
+	for (count = 92; count < 99; ++count)
+	{
+		printf(", %lu", next_high + (next_low / 1000000000));
+		printf("%09lu", next_low % 1000000000);
+		current_high = current_high + next_high;
+		next_high = current_high - next_high;
+		next_low = next_low + current_low;
+		current_low = next_low - current_low;
 	}
 
 	printf("\n");
-}
 
-int main(void)
-{
-	print_fib(98);
 	return 0;
 }
-
