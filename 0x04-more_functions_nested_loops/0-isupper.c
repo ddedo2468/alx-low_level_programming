@@ -6,7 +6,7 @@
  * @c: char to test
  * Return: 0 (Sucess)
  */
-int _islower(int c)
+int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
