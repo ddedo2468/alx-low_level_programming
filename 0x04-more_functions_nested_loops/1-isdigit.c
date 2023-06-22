@@ -1,6 +1,8 @@
 #include "main.h"
+
 /**
  * _isdigit - check if it's a digit
+ * Description: telss yot if it's digit or not
  * @c: int to be checked.
  * Return: 1 if digit else 0
  */
