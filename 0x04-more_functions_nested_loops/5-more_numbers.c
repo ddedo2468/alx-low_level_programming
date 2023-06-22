@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * more_numbers - prina all nums 0 to 14 *10
  */
