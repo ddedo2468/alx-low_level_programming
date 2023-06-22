@@ -25,4 +25,3 @@ int more_numbers(void)
 	}
 
 }
-
