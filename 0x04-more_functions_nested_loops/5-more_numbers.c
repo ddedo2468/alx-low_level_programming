@@ -1,6 +1,8 @@
 #include "main.h"
+
 /**
  * more_numbers - prina all nums 0 to 14 *10
+ * followe by new line
  */
 int more_numbers(void)
 {
