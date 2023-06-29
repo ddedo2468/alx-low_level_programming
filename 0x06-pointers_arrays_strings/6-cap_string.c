@@ -2,16 +2,18 @@
 #include "main.h"
 /**
  * cap_string - return capitalize version of the string
+ * to_upper - to change the letter to upper case
+ * @c: the letter will be checked
  * @str: the string to be capitalized
  * Return: @s capitalized
  */
 char to_upper(char c)
 {
-    if (c >= 'a' && c <= 'z')
-    {
-    return (c - 32);
-    }
-    return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+    		return (c - 32);
+	}
+	return (c);
 }
 
 char *cap_string(char *str)
