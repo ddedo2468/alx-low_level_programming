@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * cap_string - return capitalize version of the string
