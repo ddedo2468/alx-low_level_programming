@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <stdio.h>
 /**
  * _strstr - return pointer to @needle location in @haystack
  * @haystack: the place where we will search for @needle
@@ -22,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 
 			if (needle[j] == '\0')
-			return &haystack[i];
+			return (&haystack[i]);
 		}
 	}
 
