@@ -14,13 +14,14 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-	printf("0\n");
-	return (0);
+		printf("0\n");
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
 		int j;
+
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 		}
 		total += atoi(argv[i]);
 	}
-
 	printf("%d\n", total);
+
 	return (0);
 }
