@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - that prints all arguments it receives.
+ * main - program that multiplies two numbers.
  * @argc: argument number
  * @argv: argument array of strings
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	(void) argc;
 
-	for (i = 0; i < argc; i++)
+	if (argv[1] && argv[2])
 	{
-		printf("%s\n", argv[i]);
+		printf("%d\n", argv[1] * argv[2]);
 	}
+		printf("Error\n")
+
 	return (0);
 }
