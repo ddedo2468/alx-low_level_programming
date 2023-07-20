@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 /**
  * print_numbers - prints numbers given as parameters
- * @separator: str as spacer 
+ * @separator: str as spacer
  * @n: number of ints passed to the function
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
