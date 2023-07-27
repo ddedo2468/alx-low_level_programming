@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -14,7 +13,8 @@ size_t print_list(const list_t *h)
 
 	c = 0;
 	current = h;
-	if (current = NULL)
+
+	if (!h->str)
 	{
 		printf("[0] (nill)\n");
 	}
@@ -29,5 +29,5 @@ size_t print_list(const list_t *h)
 		}
 	}
 
-	return (0);
+	return (c);
 }
