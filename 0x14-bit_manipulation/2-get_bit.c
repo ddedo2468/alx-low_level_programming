@@ -1,8 +1,7 @@
 #include "main.h"
-
 /**
   * get_bit - gets the val of a bit at a exact index
-  * @n: bin number 
+  * @n: bin number
   * @index: the given index
   * Return: bit value.
   */

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - change value of a bit to 1 
+ * set_bit - change value of a bit to 1
  * @n: decimal number
  * @index: index position
  * Return: 1 Sucess, -1 Erro
