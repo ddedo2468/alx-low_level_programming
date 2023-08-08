@@ -10,28 +10,32 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t i, j, k;
+	int fileDesc;
+	ssize_t recount, wwcount;
 	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
+	fileDesc = open(filename, O_RDWR);
+	if (fileDesc == -1)
 		return (0);
 
-	i = open(filename, O_RDONLY);
-	j = read(i, buffer, letters);
-	k = write(STDOUT_FILENO, buffer, j);
-
-	if (i == -1 || j == -1 || k == -1 || k != j)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 	{
 		free(buffer);
 		return (0);
 	}
+	recount = read(fileDesc, buffer, letters);
+	if (recount == -1)
+		return (0);
 
+	wwcount = write(STDOUT_FILENO, buffer, recount);
+	if (wwcount == -1 || recount != wwcount)
+		return (0);
 	free(buffer);
-	close(i);
 
-	return (k);
+	close(fileDesc);
+	return (wwcount);
 }
