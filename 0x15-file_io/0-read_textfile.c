@@ -3,8 +3,10 @@
 /**
  * read_textfile - read text file
  * @filename: ptr to the file.
- * @letters: letters count to read and print
- * Return: If the function fails - 0.
+ * @letters: letters count to read and print.
+ * Return: if the file can not be opened or read, return 0.
+ * if filename is NULL return 0
+ * if write fails or does not write return 0.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
